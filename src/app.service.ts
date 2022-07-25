@@ -11,8 +11,8 @@ export class AppService {
     lastName,
     domain,
   }: DerivedEmailDto): IUserDetails {
-    const sampleUser = Object.entries(sampleDerivedEmails).find((sample) =>
-      sample[1].includes(domain.toLowerCase()),
+    const sampleUser = Object.entries(sampleDerivedEmails).find(
+      (sample) => sample[1].split('@')[1] === domain.toLowerCase(),
     );
     if (!sampleUser) {
       throw new HttpException(
