@@ -74,3 +74,14 @@ Currently, this API only supports these domains with formula username:
         "hashim Saeed": "hassae@colony.com"
     }
    ```
+## How guess email works
+
+1. Find the matching domain name record.
+2. Find out the counts of the first name and last name from which the sample username has been constructed. (Start count from 0 of each name)
+3. Apply those counts to the incoming first name and last name to construct the email.
+4. Finally, concat the username with domain and send email in response.
+
+## How we can further improve
+* Add ability to formulate ending character of name.
+* Add ability to construct email having some special characters in username.
+* More...
