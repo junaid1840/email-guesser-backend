@@ -65,6 +65,7 @@ describe('App Service', () => {
       ),
     );
   });
+
   it('should throw exception when there is some unrecognized domain', async () => {
     try {
       appService.getDeriveEmail(unrecognizedUserDomain[1]);
